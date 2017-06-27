@@ -4,6 +4,7 @@ spring cloud 学习例子<br>
 服务发现（Eureka）<br>
 &emsp;&emsp;eureka-server(服务注册中心) http://localhost:1001/ <br>
 &emsp;&emsp;eureka-client(服务提供方)http://localhost:2001/demo <br>
+&emsp;&emsp;eureka-consumer(服务消费者)http://localhost:2101/consumer <br>
 &emsp;&emsp;Note:先启动注册中心然后启动服务提供者<br>
 &emsp;&emsp;Eureka简介:http://www.cnblogs.com/wangdaijun/p/6851027.html
 <p>
