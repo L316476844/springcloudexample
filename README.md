@@ -8,6 +8,7 @@ spring cloud 学习例子<br>
 &emsp;&emsp;Note:先启动注册中心然后启动服务提供者<br>
 &emsp;&emsp;Eureka简介:http://www.cnblogs.com/wangdaijun/p/6851027.html
 <p>
+&emsp;&emsp;consul-client(consul服务提供方)
 Spring Cloud Consul项目是针对Consul的服务治理实现<br>
 &emsp;&emsp;Consul特性:服务发现,健康检查,Key/Value存储,多数据中心<br>
 &emsp;&emsp;由于Consul自身提供了服务端，所以我们不需要像之前实现Eureka的时候创建服务注册中心，<br>
