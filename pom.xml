@@ -8,6 +8,7 @@
   <modules>
     <module>eureka-server</module>
     <module>eureka-client</module>
+    <module>consul-client</module>
   </modules>
   <packaging>pom</packaging>
 
