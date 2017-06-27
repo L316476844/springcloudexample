@@ -21,7 +21,7 @@
     <contextName>SpringBootDemo</contextName>
     <property name="LOG_PATH" value="/home/logs" />
     <!--设置系统日志目录-->
-    <property name="APP_DIR" value="eureka-server" />
+    <property name="APP_DIR" value="eureka-client" />
 
     <!-- 不带彩色的日志在控制台输出时候的设置 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
