@@ -15,6 +15,7 @@ Spring Cloud Consul项目是针对Consul的服务治理实现<br>
 &emsp;&emsp;windows pc 环境变量设置 在path下加上：E:\programfiles\consul； cmd启动运行 consul agent -dev<br>
 &emsp;&emsp;consul默认地址：http://localhost:8500<br>
 &emsp;&emsp;访问demo:http://localhost:3001/demo<br>
+&emsp;&emsp;服务发现系统consul介绍:http://www.tuicool.com/articles/j2YVB3<br>
 <p>
 断路器（Hystrix）<br>
 智能路由（Zuul）<br>
