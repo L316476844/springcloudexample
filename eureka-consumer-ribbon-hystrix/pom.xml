@@ -9,10 +9,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jon.lv</groupId>
-    <artifactId>eureka-consumer-feign</artifactId>
+    <artifactId>eureka-consumer-ribbon-hystrix</artifactId>
     <packaging>jar</packaging>
 
-    <name>eureka-consumer-feign</name>
+    <name>eureka-consumer-ribbon-hystrix</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -22,7 +22,12 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
         </dependency>
 
         <dependency>
