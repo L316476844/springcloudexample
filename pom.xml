@@ -10,6 +10,7 @@
     <module>eureka-client</module>
     <module>consul-client</module>
     <module>eureka-consumer</module>
+    <module>eureka-consumer-ribbon</module>
   </modules>
   <packaging>pom</packaging>
 

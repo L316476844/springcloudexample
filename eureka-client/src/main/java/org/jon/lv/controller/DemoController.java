@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.Mapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -25,5 +26,10 @@ public class DemoController {
         String services = "Services: " + discoveryClient.getServices();
         System.out.println(services);
         return services;
+    }
+
+    @GetMapping("/name")
+    public String name(@RequestParam String name) {
+        return "-----------------:" + name;
     }
 }
