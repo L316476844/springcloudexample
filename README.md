@@ -7,7 +7,8 @@ spring cloud 学习例子<br>
 &emsp;&emsp;eureka-consumer(服务消费者-手动负载均衡)http://localhost:2101/consumer <br>
 &emsp;&emsp;eureka-consumer-ribbon(服务消费者-自动负载均衡)http://localhost:2102/ribbon <br>
 &emsp;&emsp;Note:先启动注册中心然后启动服务提供者<br>
-&emsp;&emsp;Eureka简介:http://www.cnblogs.com/wangdaijun/p/6851027.html
+&emsp;&emsp;Eureka简介:http://www.cnblogs.com/wangdaijun/p/6851027.html<br>
+&emsp;&emsp;Eureka简介:http://www.roncoo.com/article/detail/128041<br>
 <p>
 &emsp;&emsp;consul-client(consul服务提供方)
 Spring Cloud Consul项目是针对Consul的服务治理实现<br>
