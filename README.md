@@ -26,7 +26,7 @@ Spring Cloud Consul项目是针对Consul的服务治理实现<br>
 Feign是一种声明式、模板化的HTTP客户端。
 &emsp;&emsp;在Spring Cloud中使用Feign, 我们可以做到使用HTTP请求远程服务时能与调用本地方法一样的编码体验，<br>
 &emsp;&emsp;开发者完全感知不到这是远程方法，更感知不到这是个HTTP请求。<br>
-&emsp;&emsp;eureka-consumer-feign(服务消费者-feign)http://localhost:2103/feign?name=hello <br>
+&emsp;&emsp;eureka-consumer-feign(服务消费者-feign): http://localhost:2103/feign?name=hello <br>
 <p>
 断路器（Hystrix）<br>
 智能路由（Zuul）<br>
