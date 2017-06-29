@@ -30,12 +30,12 @@ spring cloud 学习例子<br>
 + feign是自带断路器的，此版本hystrix是关闭的 ，如果使用feign想用断路器的话，可以在配置文件中开启它,配置如下：feign.hystrix.enabled=true<br>
 
 ## 断路器（Hystrix）<br>
-&emsp;&emsp; eureka-consumer-ribbon-hystrix(服务消费者-断路器)<br>
-&emsp;&emsp; http://localhost:2104/ribbon?name=jon<br>
++ eureka-consumer-ribbon-hystrix(服务消费者-断路器)<br>
++  http://localhost:2104/ribbon?name=jon<br>
 
 ## 智能路由（zuul）<br>
-Zuul的主要功能是路由和过滤器。
-路由功能是微服务的一部分，比如／api/user映射到user服务，/api/shop映射到shop服务。zuul实现了负载均衡。
++ Zuul的主要功能是路由和过滤器。
++ 路由功能是微服务的一部分，比如／api/user映射到user服务，/api/shop映射到shop服务。zuul实现了负载均衡。
 
 ## 客户端负载均衡（Ribbon）<br>
 
