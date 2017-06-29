@@ -37,5 +37,12 @@ spring cloud 学习例子<br>
 + Zuul的主要功能是路由和过滤器。
 + 路由功能是微服务的一部分，比如／api/user映射到user服务，/api/shop映射到shop服务。zuul实现了负载均衡。
 
++ 依次启动顺序 eureka-server、eureka-client、eureka-consumer、eureka-consumer-feign、eureka-zuul工程
+  依次访问下面的路径查看测试效果。
++ localhost:3101/baidu
++ http://localhost:3101/index
++ http://localhost:3101/api-a/consumer
++ http://localhost:3101/api-b/feign?name=jon
+
 ## 客户端负载均衡（Ribbon）<br>
 

@@ -13,6 +13,7 @@
     <module>eureka-consumer-ribbon</module>
     <module>eureka-consumer-feign</module>
     <module>eureka-consumer-ribbon-hystrix</module>
+    <module>eureka-zuul</module>
   </modules>
   <packaging>pom</packaging>
 
