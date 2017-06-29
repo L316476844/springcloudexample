@@ -27,11 +27,11 @@ spring cloud 学习例子<br>
 + Feign是一种声明式、模板化的HTTP客户端。<br>
 + 在Spring Cloud中使用Feign, 我们可以做到使用HTTP请求远程服务时能与调用本地方法一样的编码体验，开发者完全感知不到这是远程方法，更感知不到这是个HTTP请求。<br>
 + eureka-consumer-feign(服务消费者-feign): http://localhost:2103/feign?name=jon<br>
-+ feign是自带断路器的，此版本hystrix是关闭的 ，如果使用feign想用断路器的话，可以在配置文件中开启它,配置如下：feign.hystrix.enabled=true<br>
++ **feign是自带断路器的**，此版本hystrix是关闭的 ，如果使用feign想用断路器的话，可以在配置文件中开启它,配置如下：feign.hystrix.enabled=true<br>
 
 ## 断路器（Hystrix）<br>
 + eureka-consumer-ribbon-hystrix(服务消费者-断路器)<br>
-+  http://localhost:2104/ribbon?name=jon<br>
++ http://localhost:2104/ribbon?name=jon<br>
 
 ## 智能路由（zuul）<br>
 + Zuul的主要功能是路由和过滤器。
