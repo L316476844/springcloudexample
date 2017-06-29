@@ -3,7 +3,7 @@ spring cloud 学习例子<br>
 在微服务架构中，需要几个关键的组件，服务注册与发现、服务消费、负载均衡、断路器、智能路由、配置管理等，<br>
 由这几个组件可以组建一个简单的微服务架构。<br>
 <p>
-#服务发现（Eureka、consul）<br>
+## 服务发现（Eureka、consul）<br>
 &emsp;&emsp;eureka-server(服务注册中心) http://localhost:1001/ <br>
 &emsp;&emsp;eureka-client(服务提供方)http://localhost:2001/demo <br>
 &emsp;&emsp;eureka-consumer(服务消费者-手动负载均衡)http://localhost:2101/consumer <br>
@@ -24,7 +24,7 @@ Spring Cloud Consul项目是针对Consul的服务治理实现<br>
 &emsp;&emsp;访问demo:http://localhost:3001/demo<br>
 &emsp;&emsp;服务发现系统consul介绍:http://www.tuicool.com/articles/j2YVB3<br>
 <p>
-#声明式REST客户端-Feign的使用<br>
+## 声明式REST客户端-Feign的使用<br>
 &emsp;&emsp;Feign是一种声明式、模板化的HTTP客户端。<br>
 &emsp;&emsp;在Spring Cloud中使用Feign, 我们可以做到使用HTTP请求远程服务时能与调用本地方法一样的编码体验，<br>
 &emsp;&emsp;开发者完全感知不到这是远程方法，更感知不到这是个HTTP请求。<br>
@@ -32,13 +32,13 @@ Spring Cloud Consul项目是针对Consul的服务治理实现<br>
 &emsp;&emsp;feign是自带断路器的，此版本hystrix是关闭的 ，如果使用feign想用断路器的话，可以在配置文件中开启它<br>
 &emsp;&emsp;配置如下：feign.hystrix.enabled=true<br>
 <p>
-#断路器（Hystrix）<br>
+## 断路器（Hystrix）<br>
 &emsp;&emsp; eureka-consumer-ribbon-hystrix(服务消费者-断路器)<br>
 &emsp;&emsp; http://localhost:2104/ribbon?name=jon<br>
 <p>
-#智能路由（<p>）<br>
+## 智能路由（<p>）<br>
 <p>
 
 <p>
-客户端负载均衡（Ribbon）<br>
+## 客户端负载均衡（Ribbon）<br>
 
