@@ -54,10 +54,10 @@ spring cloud 学习例子<br>
 7. run：过滤器的具体逻辑。可用很复杂，包括查sql，nosql去判断该请求到底有没有权限访问。
 + 参考代码 DemoFilter
 + 修改请求地址
-* http://localhost:3101/baidu?token=org.lv.jon.token
-* http://localhost:3101/index?token=org.lv.jon.token
-* http://localhost:3101/api-a/consumer?token=org.lv.jon.token
-* http://localhost:3101/api-b/feign?name=jon&token=org.lv.jon.token
+1. http://localhost:3101/baidu?token=org.lv.jon.token
+2. http://localhost:3101/index?token=org.lv.jon.token
+3. http://localhost:3101/api-a/consumer?token=org.lv.jon.token
+4. http://localhost:3101/api-b/feign?name=jon&token=org.lv.jon.token
 
 ## 客户端负载均衡（Ribbon）<br>
 
