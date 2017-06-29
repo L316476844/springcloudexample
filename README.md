@@ -39,7 +39,7 @@ spring cloud 学习例子<br>
 
 + 依次启动顺序 eureka-server、eureka-client、eureka-consumer、eureka-consumer-feign、eureka-zuul工程
   依次访问下面的路径查看测试效果。
-+ localhost:3101/baidu
++ http://localhost:3101/baidu
 + http://localhost:3101/index
 + http://localhost:3101/api-a/consumer
 + http://localhost:3101/api-b/feign?name=jon
