@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jon.lv</groupId>
-    <artifactId>eureka-consumer-zuul</artifactId>
+    <artifactId>eureka-zuul</artifactId>
     <packaging>jar</packaging>
 
     <name>eureka-consumer-zuul</name>
