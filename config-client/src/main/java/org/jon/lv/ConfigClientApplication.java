@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigClientApplication {
 
     @Value("${jon}")
-    String foo;
+    String jon;
 
     @RequestMapping(value = "/jon")
     public String jon(){
-        return foo;
+        return jon;
     }
 
     public static void main(String[] args) {
