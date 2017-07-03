@@ -59,5 +59,13 @@ spring cloud 学习例子<br>
 * http://localhost:3101/api-a/consumer?token=org.lv.jon.token
 * http://localhost:3101/api-b/feign?name=jon&token=org.lv.jon.token
 
+## 分布式配置中心(Spring Cloud Config)
+在分布式系统中，spring cloud config 提供一个服务端和客户端去提供可扩展的配置服务。<br>
+我们可用用配置服务中心区集中的管理所有的服务的各种环境配置文件。配置服务中心采用Git的方式存储配置文件，
+因此我们很容易部署修改，有助于对环境配置进行版本管理。
+### config-server
+
+### config-client
+
 ## 客户端负载均衡（Ribbon）<br>
 
