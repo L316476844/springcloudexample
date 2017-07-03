@@ -54,17 +54,24 @@ spring cloud 学习例子<br>
 7. run：过滤器的具体逻辑。可用很复杂，包括查sql，nosql去判断该请求到底有没有权限访问。
 + 参考代码 DemoFilter
 + 修改请求地址
-* http://localhost:3101/baidu?token=org.lv.jon.token
-* http://localhost:3101/index?token=org.lv.jon.token
-* http://localhost:3101/api-a/consumer?token=org.lv.jon.token
-* http://localhost:3101/api-b/feign?name=jon&token=org.lv.jon.token
+1. http://localhost:3101/baidu?token=org.lv.jon.token
+2. http://localhost:3101/index?token=org.lv.jon.token
+3. http://localhost:3101/api-a/consumer?token=org.lv.jon.token
+4. http://localhost:3101/api-b/feign?name=jon&token=org.lv.jon.token
 
 ## 分布式配置中心(Spring Cloud Config)
-在分布式系统中，spring cloud config 提供一个服务端和客户端去提供可扩展的配置服务。<br>
+在分布式系统中，spring cloud config 提供一个服务端和客户端去提供可扩展的配置服务。
 我们可用用配置服务中心区集中的管理所有的服务的各种环境配置文件。配置服务中心采用Git的方式存储配置文件，
 因此我们很容易部署修改，有助于对环境配置进行版本管理。
 ### config-server
-
+#### 访问配置信息的URL与配置文件的映射关系如下：
+* /{application}/{profile}[/{label}]
+* /{application}-{profile}.yml
+* /{label}/{application}-{profile}.yml
+* /{application}-{profile}.properties
+* /{label}/{application}-{profile}.properties
+application:表示应用名称,在client中通过spring.config.name配置,profile:表示获取指定环境下配置，例如开发环境、测试环境、生产环境 默认值default，实际开发中可以是 dev、test、demo、production等
+label: git标签，默认值master
 ### config-client
 
 ## 客户端负载均衡（Ribbon）<br>

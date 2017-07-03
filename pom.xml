@@ -14,6 +14,8 @@
     <module>eureka-consumer-feign</module>
     <module>eureka-consumer-ribbon-hystrix</module>
     <module>eureka-zuul</module>
+    <module>config-server</module>
+    <module>config-client</module>
   </modules>
   <packaging>pom</packaging>
 
