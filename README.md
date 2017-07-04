@@ -86,5 +86,13 @@ label: git标签，默认值master
 4. 以post请求的方式来访问http://localhost:8001/refresh 就会更新修改后的配置文件。
 5. 查看更新后的参数 http://localhost:8001/jon
 
-## 客户端负载均衡（Ribbon）<br>
+## 消息总线(Spring Cloud Bus)
+
+## 服务链路追踪(Spring Cloud Sleuth)
+
+## 高可用的服务注册中心
+
+## 断路器监控(Hystrix Dashboard)
+
+## 断路器聚合监控(Hystrix Turbine)
 
