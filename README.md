@@ -64,6 +64,7 @@ spring cloud 学习例子<br>
 我们可用用配置服务中心区集中的管理所有的服务的各种环境配置文件。配置服务中心采用Git的方式存储配置文件，
 因此我们很容易部署修改，有助于对环境配置进行版本管理。
 ### config-server
+    高可用配置中心 config-eureka-server 使用eureka做为配置服务注册中心,需要启动eureka-server配合使用。
 #### 访问配置信息的URL与配置文件的映射关系如下：
 * /{application}/{profile}[/{label}]
 * /{application}-{profile}.yml
@@ -74,6 +75,8 @@ application:表示应用名称,在client中通过spring.config.name配置,profil
 label: git标签，默认值master
 * http://localhost:8888/config-client/dev
 ### config-client
+    ** config-client 配置文件必须要使用bootstrap.properties **<br>
+    高可用配置中心客户端 config-eureka-client 使用eureka做为配置服务注册中心,需要启动eureka-server，config-eureka-server配合使用。
 * 启动config-server 然后启动config-server  访问http://localhost:8800/jon
 ## 客户端负载均衡（Ribbon）<br>
 
