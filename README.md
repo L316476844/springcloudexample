@@ -77,6 +77,7 @@ label: git标签，默认值master
 ### config-client
    **config-client 配置文件必须要使用bootstrap.properties**<br>
     高可用配置中心客户端 config-eureka-client 使用eureka做为配置服务注册中心,需要启动eureka-server，config-eureka-server配合使用。
+    http://localhost:8001/jon
 * 启动config-server 然后启动config-server  访问http://localhost:8800/jon
 ## 客户端负载均衡（Ribbon）<br>
 
