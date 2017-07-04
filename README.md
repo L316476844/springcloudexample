@@ -79,5 +79,12 @@ label: git标签，默认值master
     高可用配置中心客户端 config-eureka-client 使用eureka做为配置服务注册中心,需要启动eureka-server，config-eureka-server配合使用。
     http://localhost:8001/jon
 * 启动config-server 然后启动config-server  访问http://localhost:8800/jon
+### 动态更新配置参数
+1. 在客户端启动类添加注解 @RefreshScope 使用该注解的类，会在接到SpringCloud配置中心配置刷新的时候，自动将新的配置更新到该类对应的字段中。
+2. 在客户端pom增加spring-boot-starter-actuator包，spring-boot-starter-actuator是一套监控的功能，可以监控程序在运行时状态，其中就包括/refresh的功能。
+3. springboot 1.5.X 以上默认开通了安全认证，所以需要在配置文件application.properties中关闭安全认证：management.security.enabled=false
+4. 以post请求的方式来访问http://localhost:8001/refresh 就会更新修改后的配置文件。
+5. 查看更新后的参数 http://localhost:8001/jon
+
 ## 客户端负载均衡（Ribbon）<br>
 
