@@ -92,6 +92,46 @@ label: git标签，默认值master
     若所有触发操作均需要我们手工去维护系统中的应用位置的话，这随着系统的不断扩张，会变的越来越难以维护，
     而消息代理中间件是解决该问题最为合适的方案。消息代理中间件可以将消息路由到一个或多个目的地。
     利用这个功能，我们就能完美的解决该问题。
+** 注意kafka版本与springcloud版本兼容问题本工程spring-cloud-dependencies版本修改为Brixton.SR5**
+### kafka方式实现消息总线 需配合eureka注册中心使用 eureka-server
+1. 服务端config-server-eureka-bus
+    application.properties配置
+    #kafka配置
+    spring.cloud.stream.kafka.binder.zk-nodes=192.168.88.177:2181
+    spring.cloud.stream.kafka.binder.brokers=192.168.88.177:9092
+    pom.xml配置
+     <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-bus-kafka</artifactId>
+     </dependency>
+2. 客服端config-client-eureka-bus
+    bootstrap.properties配置
+    #kafka配置
+    spring.cloud.stream.kafka.binder.zk-nodes=192.168.88.177:2181
+    spring.cloud.stream.kafka.binder.brokers=192.168.88.177:9092
+    #开启消息跟踪
+    spring.cloud.bus.trace.enabled=true
+3. Spring Cloud Bus做配置更新步骤如下图:
+* 提交代码触发post请求给bus/refresh
+* server端接收到请求并发送给Spring Cloud Bus
+* Spring Cloud bus接到消息并通知给其它客户端
+* 其它客户端接收到通知，请求Server端获取最新配置
+* 全部客户端均获取到最新的配置
+
+<img src="http://blog.didispace.com/assets/5-7.png" alt="">
+
+### 局部刷新配置
+    某些场景下（例如灰度发布），我们可能只想刷新部分微服务的配置，此时可通过/bus/refresh端点的destination参数来定位要刷新的应用程序。
+    例如：/bus/refresh?destination=customers:8000，这样消息总线上的微服务实例就会根据destination参数的值来判断是否需要要刷新。
+    其中，customers:8000指的是各个微服务的ApplicationContext ID。
+    destination参数也可以用来定位特定的微服务。例如：/bus/refresh?destination=customers:**，这样就可以触发customers微服务所有实例的配置刷新。
+### 跟踪总线事件
+    一些场景下，我们可能希望知道Spring Cloud Bus事件传播的细节。此时，我们可以跟踪总线事件（RemoteApplicationEvent的子类都是总线事件）。
+    跟踪总线事件非常简单，只需设置spring.cloud.bus.trace.enabled=true，这样在/bus/refresh端点被请求后，访问/trace端点就可获得类。
+### /bus/refresh BUG
+    对客户端执行/bus/refresh之后，挂到总线的上的客户端都会从Eureka注册中心撤销登记；
+    如果对server端执行/bus/refresh,server端也会从Eureka注册中心撤销登记。
+    Spring Cloud的Dalston.SR1版本，解决这个bug.
 
 ## 服务链路追踪(Spring Cloud Sleuth)
 

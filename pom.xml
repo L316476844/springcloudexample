@@ -18,6 +18,8 @@
     <module>config-client</module>
     <module>config-eureka-server</module>
     <module>config-eureka-client</module>
+    <module>config-server-eureka-bus</module>
+    <module>config-client-eureka-bus</module>
   </modules>
   <packaging>pom</packaging>
 
