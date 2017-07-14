@@ -92,7 +92,7 @@ label: git标签，默认值master
     若所有触发操作均需要我们手工去维护系统中的应用位置的话，这随着系统的不断扩张，会变的越来越难以维护，
     而消息代理中间件是解决该问题最为合适的方案。消息代理中间件可以将消息路由到一个或多个目的地。
     利用这个功能，我们就能完美的解决该问题。
-<b> 注意kafka版本与springcloud版本兼容问题本工程spring-cloud-dependencies版本修改为Brixton.SR5 </b>
+<b style="color:red;"> 注意kafka版本与springcloud版本兼容问题本工程spring-cloud-dependencies版本修改为Brixton.SR5 </b>
 #### kafka方式实现消息总线 需配合eureka注册中心使用 eureka-server
 1. 服务端config-server-eureka-bus
     application.properties配置
