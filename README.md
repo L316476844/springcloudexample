@@ -118,7 +118,7 @@ label: git标签，默认值master
 * 其它客户端接收到通知，请求Server端获取最新配置
 * 全部客户端均获取到最新的配置
 
-<img src="http://blog.didispace.com/assets/5-7.png" alt="">
+<img src="https://github.com/L316476844/springcloudexample/blob/master/files/5-7.png" alt="">
 
 ### 局部刷新配置
     某些场景下（例如灰度发布），我们可能只想刷新部分微服务的配置，此时可通过/bus/refresh端点的destination参数来定位要刷新的应用程序。
