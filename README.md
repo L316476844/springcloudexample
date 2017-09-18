@@ -3,7 +3,9 @@
 spring cloud 学习例子<br>
 在微服务架构中，需要几个关键的组件，服务注册与发现、服务消费、负载均衡、断路器、智能路由、配置管理等，<br>
 由这几个组件可以组建一个简单的微服务架构。<br>
-<img src="https://github.com/L316476844/springcloudexample/springcloud.jpg" alt="">
+
+<img src="https://github.com/L316476844/springcloudexample/blob/master/springcloud.jpg" alt="">
+
 ## 服务发现（Eureka、consul）<br>
 + eureka-server(服务注册中心) http://localhost:1001/ <br>
 + eureka-client(服务提供方)http://localhost:2001/demo <br>
